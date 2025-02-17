@@ -2,8 +2,10 @@
   <div id="app">
     <AppHeader />
 
-    <!-- This will change based on the current route -->
-    <router-view />
+    <!-- Wrap the router-view in a transition for page animations -->
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
 
     <AppFooter />
   </div>
@@ -28,5 +30,15 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
+}
+
+/* Animation for fade transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
 }
 </style>

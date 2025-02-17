@@ -5,22 +5,27 @@
       id="hero"
     >
       <div class="w-1/2 flex flex-col justify-left gap-10">
-        <h1
-          v-if="showAbout === 'jayar'"
-          class="text-3xl font-bold text-left text-[#414a4c]"
-        >
-          Welcome to my technical Assessment for Elite Softwares and Data
-          Security Inc.
-        </h1>
-        <h1
-          v-if="showAbout === 'company'"
-          class="text-3xl font-bold text-left text-[#414a4c]"
-        >
-          Welcome to Elite Software and Data Security, Inc. <br />
-          <span class="text-lg">
-            We make sure your system is secured and always available.</span
-          >
-        </h1>
+        <!-- Dynamically show content with transition -->
+        <transition name="fade" mode="out-in">
+          <div :key="showAbout">
+            <h1
+              v-if="showAbout === 'jayar'"
+              class="text-3xl font-bold text-left text-[#414a4c]"
+            >
+              Welcome to my technical Assessment for Elite Softwares and Data
+              Security Inc.
+            </h1>
+            <h1
+              v-if="showAbout === 'company'"
+              class="text-3xl font-bold text-left text-[#414a4c]"
+            >
+              Welcome to Elite Software and Data Security, Inc. <br />
+              <span class="text-lg">
+                We make sure your system is secured and always available.
+              </span>
+            </h1>
+          </div>
+        </transition>
         <div class="button-container flex gap-4">
           <button
             class="bg-[#8db648] text-white p-2 rounded shadow-lg"
@@ -60,10 +65,10 @@
       </div>
     </div>
 
-    <!-- Dynamically show content -->
     <div
       class="flex flex-col mt-6 text-white bg-black px-[10%] p-12 items-center justify-center"
       id="selected-description"
+      :key="showAbout"
     >
       <h1 class="pb-5 text-lg font-bold">
         Dynamically show info based on the buttons
@@ -136,5 +141,18 @@ export default {
   #selected-description {
     font-size: 14px;
   }
+}
+
+/* Fade Transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
+}
+.fade-enter-to,
+.fade-leave {
+  opacity: 1;
 }
 </style>
