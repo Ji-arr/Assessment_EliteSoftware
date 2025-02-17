@@ -69,36 +69,36 @@ export default {
       employee_contact: [
         {
           id: 1,
-          name: "Facebook",
-          url: "https://www.facebook.com/",
+          name: "Website",
+          url: "https://ji-arr.github.io/portfolio/",
         },
         {
           id: 2,
-          name: "LinkedIn",
-          url: "https://linkedin.com/",
+          name: "09267535388",
+          url: "tel:09267535388",
         },
         {
           id: 3,
-          name: "Portfolio",
-          url: "https://www.linkedin.com/",
+          name: "portaganajayar@gmail.com",
+          url: "mailto:portaganjayar@gmail.com",
         },
       ],
 
       employer_contact: [
         {
           id: 1,
-          name: "Facebook",
-          url: "https://www.facebook.com/",
+          name: "Website",
+          url: "https://www.elitesdsi.com/",
         },
         {
           id: 2,
-          name: "LinkedIn",
-          url: "https://linkedin.com/",
+          name: "(02) 8247 2056",
+          url: "tel:(02) 8247 2056",
         },
         {
           id: 3,
-          name: "Portfolio",
-          url: "https://www.linkedin.com/",
+          name: "info@elitesdsi.com",
+          url: "mailto:info@elitesdsi.com",
         },
       ],
     };
