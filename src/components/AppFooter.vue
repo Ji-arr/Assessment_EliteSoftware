@@ -52,12 +52,17 @@ export default {
         {
           id: 2,
           name: "Features",
-          url: "/features",
+          url: "/#features-container",
         },
         {
           id: 3,
           name: "Contact",
           url: "/contact",
+        },
+        {
+          id: 4,
+          name: "Optionals",
+          url: "/#optionals-container",
         },
       ],
 
